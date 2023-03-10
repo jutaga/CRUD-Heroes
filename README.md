@@ -10,7 +10,7 @@ Listado de tarjetas de heroes , CRUD, LOGIN basico
 
 
 # JSON SERVER
-[JSON SERVER](https://www.npmjs.com/package/json-server)
+[JSON SERVER](https://heroes-crud-jp.netlify.app/404)
 
 # Instrucciones
 - Descarga el reposositorio
