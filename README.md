@@ -6,7 +6,7 @@ Este es un proyecto generado con [Angular CLI](https://github.com/angular/angula
 Listado de tarjetas de heroes , CRUD, LOGIN basico
 
 # Deployment
-[DEMO](https://heroes-crud-jp.netlify.app/auth/login)
+[DEMO](https://crud-heroeslista.netlify.app/#/auth/login)
 
 
 # JSON SERVER
