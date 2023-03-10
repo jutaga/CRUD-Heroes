@@ -1,0 +1,62 @@
+
+<h1>{{(heroe.id) ? 'Editar' : 'Nuevo'}} Heroe <small>{{heroe.superhero}}</small></h1>
+
+<div class="row">
+
+  <div class="col-md-6">
+    <div class="row">
+      <mat-form-field class="col-6">
+        <mat-label>Super Heroe</mat-label>
+        <input matInput required type="text" [(ngModel)]="heroe.superhero">
+      </mat-form-field>
+
+      <mat-form-field class="col-6">
+        <mat-label>Alter Ego</mat-label>
+        <input matInput required type="text" [(ngModel)]="heroe.alter_ego">
+      </mat-form-field>
+    </div>
+
+    <mat-form-field class="d-block">
+      <mat-label>Primera Aparicion</mat-label>
+      <input matInput required type="text" [(ngModel)]="heroe.first_appearance">
+    </mat-form-field>
+
+    <mat-form-field class="d-block">
+      <mat-label>Personajes</mat-label>
+      <input matInput required type="text" [(ngModel)]="heroe.characters">
+    </mat-form-field>
+
+    <mat-form-field class="d-block">
+      <mat-label>Creador</mat-label>
+      <mat-select required [(ngModel)]="heroe.publisher">
+        <mat-option *ngFor="let publisher of publishers" [value]="publisher.id">{{publisher.desc}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="d-block">
+      <mat-label>Foto URL</mat-label>
+      <input matInput required type="url" [(ngModel)]="heroe.alt_img">
+    </mat-form-field>
+
+    <div class="row mb-sm-3">
+      <div class="col-md-6">
+        <button (click)="guardar()" color="primary" mat-raised-button class="w-100 mb-3">
+          <mat-icon>edit</mat-icon>
+          {{(heroe.id) ? 'Actualizar' : 'Crear'}}
+        </button>
+      </div>
+
+      <div class="col-md-6">
+        <button (click)="borrarHeroe()" *ngIf="heroe.id" mat-flat-button color="warn" class="w-100">
+          <mat-icon>remove</mat-icon>
+          Borrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <img class="img-fluid  rounded-4" [src]=" heroe | imagen" alt="imagen heroe">
+  </div>
+
+</div>

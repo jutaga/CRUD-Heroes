@@ -1,0 +1,11 @@
+<h1 class="text-center">Listado de Heroes</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div *ngFor="let heroe of heroes" class="col-lg-2 col-md-4 col-sm-5">
+      <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta>
+    </div>
+  </div>
+</div>

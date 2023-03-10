@@ -1,0 +1,16 @@
+<div class="container m-2 p-2 ">
+  <h1 class="fw-bold text-white">¿Estas Seguro?</h1>
+
+<hr class="text-white">
+<p class="text-start text-white">
+  Estas a punto de borrar a {{data.superhero}}
+  <br>
+  ¿desea desea continuar?
+</p>
+
+<div>
+  <button mat-button (click)="borrar()" color="warn">Si, borrar</button>
+  <button mat-button (click)="cerrar()" >Cancelar</button>
+</div>
+
+</div>
